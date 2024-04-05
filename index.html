@@ -69,9 +69,7 @@
 </div>
 </div>
 
-<div id="mainChat">
-<iframe src="https://www.chatbro.com/en/18y6a/" width="300px" height="300px" frameborder="0"></iframe>
-</div>
+<script id="chatBroEmbedCode">/* Chatbro Widget Embed Code Start */function ChatbroLoader(chats,async){async=!1!==async;var params={embedChatsParameters:chats instanceof Array?chats:[chats],lang:navigator.language||navigator.userLanguage,needLoadCode:'undefined'==typeof Chatbro,embedParamsVersion:localStorage.embedParamsVersion,chatbroScriptVersion:localStorage.chatbroScriptVersion},xhr=new XMLHttpRequest;xhr.withCredentials=!0,xhr.onload=function(){eval(xhr.responseText)},xhr.onerror=function(){console.error('Chatbro loading error')},xhr.open('GET','https://www.chatbro.com/embed.js?'+btoa(unescape(encodeURIComponent(JSON.stringify(params)))),async),xhr.send()}/* Chatbro Widget Embed Code End */ChatbroLoader({encodedChatId: '18y6a'});</script>
 
 <style>
 
@@ -178,7 +176,7 @@ filter: brightness(70%);
 /* ------------------------ Main window ------------------------ */
 
 #mainContainer {
-width: 640px;
+width: 540px;
 height: 575px;
 top: 50%;
 left: calc(50% + 149px);
@@ -429,13 +427,6 @@ background-color: #555;
 width: 7px;
 }
 }
-
-#mainChat {
-position: absolute;
-bottom: 10px;
-right: 10px;
-}
-
 
 hr {
 margin: 6px 0px 0px;
