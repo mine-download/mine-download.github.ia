@@ -436,6 +436,17 @@ margin: 6px 0px 0px;
 </style>
 <script>
 
+// MIRA ESTA CROTADA JAJAJAJA
+var esFirefox = typeof InstallTrigger !== 'undefined'; // Verificar si es Firefox
+
+if (esFirefox) {
+  document.getElementById("entryContainer").style.overflowY = "hidden";
+  document.getElementById("serverInfo").style.overflowY = "hidden";
+} else {
+  document.getElementById("entryContainer").style.overflowY = "auto";
+  document.getElementById("serverInfo").style.overflowY = "auto";
+}
+
 var elementsData = {
 "t2": {
 "title": "Celulares",
