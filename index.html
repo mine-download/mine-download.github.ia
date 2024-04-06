@@ -440,11 +440,17 @@ margin: 6px 0px 0px;
 var esFirefox = typeof InstallTrigger !== 'undefined'; // Verificar si es Firefox
 
 if (esFirefox) {
-  document.getElementById("entryContainer").style.overflowY = "hidden";
-  document.getElementById("serverInfo").style.overflowY = "hidden";
+ document.getElementById("entryContainer").style.scrollbarColor = "#555 rgb(0, 0, 0)";
+  document.getElementById("entryContainer").style.scrollbarWidth = "thin";
+  document.getElementById("entryContainer").style.overflowX = "hidden";
+  document.getElementById("serverInfo").style.scrollbarColor = "#555 rgb(0, 0, 0)";
+  document.getElementById("serverInfo").style.scrollbarWidth = "thin";
+  document.getElementById("serverInfo").style.overflowX = "hidden";
 } else {
+  document.getElementById("entryContainer").style.overflowX = "hidden";
   document.getElementById("entryContainer").style.overflowY = "auto";
   document.getElementById("serverInfo").style.overflowY = "auto";
+  document.getElementById("serverInfo").style.overflowX = "hidden";
 }
 
 var elementsData = {
