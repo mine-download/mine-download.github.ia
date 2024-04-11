@@ -1312,9 +1312,11 @@ document.getElementById("entryContainer").scrollTo({top: 0})
 // Styling of the tab buttons
 document.getElementById(tab.selected).style.backgroundColor = "rgba(0, 0, 0, 0)"
 document.getElementById(tab.selected).style.boxShadow = "inset 0 0 0 3px rgba(0, 0, 0, 0)"
+document.getElementById(tab.selected).style.cursor = "pointer"
 tab.selected = id
 document.getElementById(tab.selected).style.backgroundColor = "rgba(255, 255, 255, 0.07)"
 document.getElementById(tab.selected).style.boxShadow = "inset 0 0 0 3px rgba(255, 255, 255, 0.07)"
+document.getElementById(tab.selected).style.cursor = "pointer"
 
 // This is used for keyboard navigation
 tab.selectedInt = parseInt(tab.selected.slice(1))
