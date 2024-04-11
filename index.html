@@ -1360,8 +1360,10 @@ document.getElementById("entryContainer").appendChild(newElement)
 
 // Change selected entry
 function selectEntry(id, keyboardNavigation) {
+document.getElementById(entry.selected).style.cursor = "pointer"
 document.getElementById(entry.selected).style.backgroundColor = "rgba(0, 0, 0, 0)"
 entry.selected = id
+document.getElementById(entry.selected).style.cursor = "pointer"
 document.getElementById(entry.selected).style.backgroundColor = "rgba(255, 255, 255, 0.09)"
 
 
