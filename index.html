@@ -250,8 +250,6 @@ padding-top: 2px;
 padding-bottom: 9px;
 overflow-x: hidden;
 overflow-y: auto;
-scrollbar-width: thin;
-scrollbar-color: rgba(85, 85, 85, 1) rgb(0, 0, 0);
 }
 
 /* Modern browsers with `scrollbar-*` support */
@@ -466,15 +464,11 @@ var esFirefox = typeof InstallTrigger !== 'undefined';
 if (esFirefox) {
 document.getElementById("entryContainer").style.scrollbarColor = "rgba(85, 85, 85, 1) rgb(0, 0, 0)";
 document.getElementById("entryContainer").style.scrollbarWidth = "thin";
-document.getElementById("entryContainer").style.overflowX = "hidden";
 document.getElementById("serverInfo").style.scrollbarColor = "rgba(85, 85, 85, 1) rgb(0, 0, 0)";
 document.getElementById("serverInfo").style.scrollbarWidth = "thin";
-document.getElementById("serverInfo").style.overflowX = "hidden";
+document.getElementById("textContainer").style.scrollbarColor = "rgba(85, 85, 85, 1) rgb(0, 0, 0)";
+document.getElementById("textContainer").style.scrollbarWidth = "thin";
 } else {
-document.getElementById("entryContainer").style.overflowX = "hidden";
-document.getElementById("entryContainer").style.overflowY = "auto";
-document.getElementById("serverInfo").style.overflowY = "auto";
-document.getElementById("serverInfo").style.overflowX = "hidden";
 }
 
 // Por si tiran los links se cambia facil
