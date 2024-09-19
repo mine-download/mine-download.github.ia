@@ -151,6 +151,7 @@ margin-top: "96px"
 }
 
 .tabButton {
+display: block;
 background-color: rgba(0, 0, 0, 0);
 color: rgba(255, 255, 255, 1);
 width: 180px;
@@ -201,6 +202,9 @@ filter: brightness(70%);
 /* ------------------------ Main window ------------------------ */
 
 #mainContainer {
+overflow-x: hidden;
+overflow-y: auto;
+display: block;
 width: 440px;
 height: 575px;
 top: 50%;
@@ -1891,12 +1895,12 @@ if (entryContainer) {
 tab.amount = Object.keys(elementsData).length
 
 // Creates the tabs themselves with the info of the JSON
-for (let i = 1; i <= tab.amount; i++) {
-let newElement = document.createElement("a")
-newElement.id = "t" + i
-newElement.className = "tabButton"
-newElement.innerHTML = elementsData["t" + i].title
-document.getElementById("tabContainer").appendChild(newElement)
+for (var i = 1; i <= tab.amount; i++) {
+    var newElement = document.createElement("a");
+    newElement.id = "t" + i;
+    newElement.className = "tabButton";
+    newElement.innerHTML = elementsData["t" + i].title;
+    document.getElementById("tabContainer").appendChild(newElement);
 }
 
 // Expands the tab container width depending how many tabs there are
@@ -2025,19 +2029,22 @@ selectEntry("e1")
 
 // Update entries
 function updateEntries() {
-// Deletes old entries
-document.getElementById("entryContainer").textContent = ""
+    // Deletes old entries
+    document.getElementById("entryContainer").textContent = "";
 
-// Creates the new ones
-entry.amount = Object.keys(elementsData[tab.selected]).length - 2
+    // Creates the new ones
+    entry.amount = Object.keys(elementsData[tab.selected]).length - 2;
 
-for (let i = 1; i <= entry.amount; i++) {
-let newElement = document.createElement("span")
-newElement.id = "e" + i
-newElement.className = "listEntry"
-newElement.innerHTML = elementsData[tab.selected]["e" + i].name
-document.getElementById("entryContainer").appendChild(newElement)
-}
+    var i = 1;
+    while (i <= entry.amount) {
+        var newElement = document.createElement("span");
+        newElement.id = "e" + i;
+        newElement.className = "listEntry";
+        newElement.innerHTML = elementsData[tab.selected]["e" + i].name;
+
+        document.getElementById("entryContainer").appendChild(newElement);
+        i++;
+    }
 }
 
 
