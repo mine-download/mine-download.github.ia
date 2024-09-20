@@ -140,6 +140,7 @@ position: absolute;
 }
 
 #tabContainer {
+display: block;
 height: 30px;
 margin-top: 85px;
 position: absolute;
@@ -1047,9 +1048,9 @@ var elementsData = {
 },
 "e88": {
 "name": "Pro Evolution Soccer 13",
-"l1": hug + "Pro%20Evolution%20Soccer%202013.7z?download=true",
+"l1": hug + "Pro%20Evolution%20Soccer%202013%20Opti.7z?download=true",
 "l2": hug + "PES13%20OptiPanas%20Installer.zip?download=true",
-"b1": "Original",
+"b1": "Original *ESPAÑOL*",
 "b2": "Demo *REPACK*"
 },
 "e89": {
@@ -2103,7 +2104,7 @@ fullButtonWidth = "408px"
 splitButtonWidth = "196px"
 document.getElementById("download2").style.left = "0px"
 } else {
-document.getElementById("info").style.opacity = null
+document.getElementById("info").style.opacity = "100"
 fullButtonWidth = "356px"
 splitButtonWidth = "170px"
 document.getElementById("download2").style.left = "52px"
@@ -2115,12 +2116,12 @@ document.getElementById("download1").style.width = fullButtonWidth
 document.getElementById("download2").removeAttribute("href")
 document.getElementById("download2").style.opacity = "0"
 } else {
-document.getElementById("download2").style.display = null
+document.getElementById("download2").style.display = "flex"
 document.getElementById("download1").style.width = splitButtonWidth
 document.getElementById("download2").style.width = splitButtonWidth
 document.getElementById("download2").setAttribute("href", elementsData[tab.selected][entry.selected].l2)
 document.getElementById("download2").innerHTML = elementsData[tab.selected][entry.selected].b2
-document.getElementById("download2").style.opacity = null
+document.getElementById("download2").style.opacity = "100"
 }
 }
 
